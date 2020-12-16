@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-xs-8 col-mid-6 col-mf-offset-3">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" class="form-control" ngModel required> 
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" name="age" class="form-control" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" value="male" ngModel > Male
+            <input type="radio" name="gender" value="female" ngModel> Female
+             <input type="radio" name="gender" value="other" ngModel> Other
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>  
+            <input type="text" 
+                   ngModel
+                   email
+                   id="email"
+                   class="form-control"
+                   name="email"
+                   required>      
+          </div>
+          <div class="form-group">
+            <label for="task">Task</label>  
+            <input type="text"
+                   id="task"
+                   ngModel
+                   name="task"
+                   class="form-control"
+                   required
+                   minlength="5">        
+          </div>
+        <div class="text-right">
+          <!-- <span class="bt"><button class="btn btn-primary" type="button" (click)="onAdd()">Add</button></span> -->
+          <span class="bt"><button class="btn btn-primary" type="submit" [disabled]="!f.valid">SaveData</button></span>
+          <span class="bt"><button class="btn btn-primary" type="button" (click)="onShow()">Show All Records</button></span> 
+        </div>  
+       
+      </form>
+    </div>
+  </div>
